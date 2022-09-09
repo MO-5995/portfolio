@@ -1,11 +1,15 @@
-import React from "react";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="t-MV__hero">
-      <h1>Portfolio</h1>
-      <p>Markup Engineer</p>
-      <h3>Mai Oshiro</h3>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+      </main>
+      <Footer />
+    </>
   );
 }
