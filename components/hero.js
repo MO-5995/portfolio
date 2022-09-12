@@ -1,11 +1,10 @@
 import React from "react";
 
-export default function Hero() {
+export default function Hero({ title, subtitle }) {
   return (
     <div className="t-MV__hero">
-      <h1>Portfolio</h1>
-      <p>Markup Engineer</p>
-      <h3>Mai Oshiro</h3>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
     </div>
   );
 }
