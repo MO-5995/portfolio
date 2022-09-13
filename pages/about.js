@@ -7,11 +7,23 @@ import {
   TwoColumnMain,
   TwoColumnSidebar,
 } from "@/components/two-column";
+import Image from "next/image";
+import eyecatch from "images/icon.png";
 
 export default function About() {
   return (
     <Container>
       <Hero title="About" subtitle="About me" />
+      <figure style={{ maxWidth: "500px", margin: "0 auto" }}>
+        <Image
+          src={eyecatch}
+          alt=""
+          layout="responsive"
+          sizes="(min-width:500px) 500px, 100vw"
+          priority
+          placeholder="blur"
+        />
+      </figure>
       <TwoColumn>
         <TwoColumnMain>
           <WorkBody>
