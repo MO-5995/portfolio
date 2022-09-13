@@ -7,7 +7,7 @@ export default function Home() {
       <Hero
         title="PORTFOLIO"
         subtitle="Markup Engineer"
-        text="Mai Oshiro"
+        text="Mai O."
         imageOn
       />
     </Container>

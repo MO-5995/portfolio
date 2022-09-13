@@ -20,3 +20,12 @@
 .text {
   font-size: var(--heading1);
 }
+
+.image {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .image {
+    width: 50%;
+  }
+}
