@@ -14,7 +14,13 @@ import eyecatch from "images/icon.png";
 export default function About() {
   return (
     <Container>
-      <Meta pageTitle="about" />
+      <Meta
+        pageTitle="about"
+        pageDesc="About me"
+        pageImg={eyecatch.src}
+        pageImgW={eyecatch.width}
+        pageImgH={eyecatch.height}
+      />
       <Hero title="About" subtitle="About me" />
       <figure style={{ maxWidth: "500px", margin: "0 auto" }}>
         <Image
