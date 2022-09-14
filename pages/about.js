@@ -1,3 +1,4 @@
+import Meta from "@/components/meta";
 import Container from "@/components/container";
 import Hero from "@/components/hero";
 import WorkBody from "@/components/work-body";
@@ -13,6 +14,7 @@ import eyecatch from "images/icon.png";
 export default function About() {
   return (
     <Container>
+      <Meta pageTitle="about" />
       <Hero title="About" subtitle="About me" />
       <figure style={{ maxWidth: "500px", margin: "0 auto" }}>
         <Image
