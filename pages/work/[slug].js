@@ -1,5 +1,6 @@
 import { getWorkBySlug, getAllSlugs } from "lib/api";
 import { extractText } from "lib/extract-text";
+import { prevNextWork } from "lib/prev-nex-post";
 import Meta from "@/components/meta";
 import Container from "@/components/container";
 import WorkHeader from "@/components/work-header";
@@ -21,6 +22,8 @@ export default function Work({
   eyecatch,
   categories,
   description,
+  prevWork,
+  nextWork,
 }) {
   return (
     <Container>
@@ -50,6 +53,12 @@ export default function Work({
           <WorkBody>
             <ConvertBody contentHTML={content} />
           </WorkBody>
+          <div>
+            {prevWork.title} {prevWork.slug}
+          </div>
+          <div>
+            {nextWork.title} {nextWork.slug}
+          </div>
         </TwoColumnMain>
         <TwoColumnSidebar>
           <WorkCategories categories={categories} />
@@ -74,6 +83,8 @@ export async function getStaticProps(context) {
   const eyecatch = work.eyecatch ?? eyecatchLocal;
   const { base64 } = await getPlaiceholder(eyecatch.url);
   eyecatch.blurDataURL = base64;
+  const allSlugs = await getAllSlugs();
+  const [prevWork, nextWork] = prevNextWork(allSlugs, slug);
 
   return {
     props: {
@@ -82,6 +93,8 @@ export async function getStaticProps(context) {
       eyecatch: eyecatch,
       categories: work.categories,
       description: description,
+      prevWork: prevWork,
+      nextWork: nextWork,
     },
   };
 }
