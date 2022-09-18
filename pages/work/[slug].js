@@ -12,6 +12,7 @@ import {
 } from "@/components/two-column";
 import ConvertBody from "@/components/convert-body";
 import WorkCategories from "@/components/post-categories";
+import Pagination from "@/components/pagination";
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
 import { eyecatchLocal } from "lib/constants";
@@ -53,17 +54,17 @@ export default function Work({
           <WorkBody>
             <ConvertBody contentHTML={content} />
           </WorkBody>
-          <div>
-            {prevWork.title} {prevWork.slug}
-          </div>
-          <div>
-            {nextWork.title} {nextWork.slug}
-          </div>
         </TwoColumnMain>
         <TwoColumnSidebar>
           <WorkCategories categories={categories} />
         </TwoColumnSidebar>
       </TwoColumn>
+      <Pagination
+        prevText={prevWork.title}
+        prevUrl={`/work/${prevWork.slug}`}
+        nextText={nextWork.title}
+        nextUrl={`/work/${nextWork.slug}`}
+      />
     </Container>
   );
 }
