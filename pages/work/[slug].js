@@ -70,32 +70,36 @@ export default function Work({
 }
 
 export async function getStaticPaths() {
-  const allSlugs = await getAllSlugs();
+  const allSlugs = await getAllSlugs(5);
   return {
     paths: allSlugs.map(({ slug }) => `/work/${slug}`),
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
 export async function getStaticProps(context) {
   const slug = context.params.slug;
   const work = await getWorkBySlug(slug);
-  const description = extractText(work.content);
-  const eyecatch = work.eyecatch ?? eyecatchLocal;
-  const { base64 } = await getPlaiceholder(eyecatch.url);
-  eyecatch.blurDataURL = base64;
-  const allSlugs = await getAllSlugs();
-  const [prevWork, nextWork] = prevNextWork(allSlugs, slug);
+  if (!work) {
+    return { notFound: true };
+  } else {
+    const description = extractText(work.content);
+    const eyecatch = work.eyecatch ?? eyecatchLocal;
+    const { base64 } = await getPlaiceholder(eyecatch.url);
+    eyecatch.blurDataURL = base64;
+    const allSlugs = await getAllSlugs();
+    const [prevWork, nextWork] = prevNextWork(allSlugs, slug);
 
-  return {
-    props: {
-      title: work.title,
-      content: work.content,
-      eyecatch: eyecatch,
-      categories: work.categories,
-      description: description,
-      prevWork: prevWork,
-      nextWork: nextWork,
-    },
-  };
+    return {
+      props: {
+        title: work.title,
+        content: work.content,
+        eyecatch: eyecatch,
+        categories: work.categories,
+        description: description,
+        prevWork: prevWork,
+        nextWork: nextWork,
+      },
+    };
+  }
 }
