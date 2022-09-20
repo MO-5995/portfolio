@@ -38,6 +38,7 @@ export default function Work({
       <WorkHeader title={title} subtitle="Design Work" />
       <figure>
         <Image
+          key={eyecatch.url}
           src={eyecatch.url}
           alt=""
           layout="responsive"
