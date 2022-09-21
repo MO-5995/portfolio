@@ -1,4 +1,5 @@
 import { getAllCategories, getAllWorksByCategory } from "lib/api";
+import Meta from "@/components/meta";
 import Container from "@/components/container";
 import WorkHeader from "@/components/work-header";
 import Works from "@/components/works";
@@ -8,6 +9,7 @@ import { eyecatchLocal } from "lib/constants";
 export default function Category({ name, works }) {
   return (
     <Container>
+      <Meta pageTitle={name} pageDesc={`${name}に関する記事`} />
       <WorkHeader title={name} subtitle="Work Category" />
       <Works works={works} />
     </Container>
