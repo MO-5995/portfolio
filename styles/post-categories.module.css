@@ -16,6 +16,6 @@
 }
 .list {
   composes: flexContainer;
-  font-size: var(--small-heading3);
+  font-size: var(--heading3);
   gap: 0.75rem;
 }

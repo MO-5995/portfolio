@@ -1,5 +1,4 @@
 import styles from "styles/work-header.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function WorkHeader({ title, subtitle }) {
   return (
