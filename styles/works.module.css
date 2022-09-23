@@ -2,17 +2,34 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-jump);
-  margin-top: var(--space-xs);
+  margin-top: var(--space-xl);
   margin-bottom: var(--space-lg);
 }
 
 .work h2 {
-  margin-top: 0.5em;
+  margin-top: 1em;
   font-size: var(--heading3);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .work figure {
   position: relative;
   aspect-ratio: 16/9;
+}
+
+@media (hover: hover) {
+  .work figure:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+}
+
+@media (hover: none) {
+  .work figure {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .work figure:active {
+    opacity: 0.5;
+    transition: 0.3s;
+  }
 }
