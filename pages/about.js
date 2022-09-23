@@ -10,7 +10,6 @@ import {
   TwoColumnSidebar,
 } from "@/components/two-column";
 import Image from "next/image";
-//import eyecatch from "images/icon.png";
 
 const eyecatch = {
   src: "https://images.microcms-assets.io/assets/7fad38de05fc4dcba30e419a0c5e4625/b638681c71974e91b26187a55a7efb41/icon.png",
@@ -45,17 +44,17 @@ export default function About() {
           <WorkBody>
             <h1>Mai O.</h1>
             <p>
-              現在Shopifyの有料テーマをベースにHTML、CSS、JavaScript、liquid(RubyベースのShopify言語)を用いたコーディングに携わっています。
+              現在Shopifyの有料テーマをベースにHTML、CSS、JavaScript、Liquid(RubyベースのShopify言語)を用いたコーディングに携わっています。
               <br />
               UIデザインを独学で学んでおり、将来的にはデザインに強いフロントエンドエンジニアになることを目標にしています。
             </p>
-            <h3>◯使用可能言語、フレームワーク</h3>
+            <h3>◯ 使用可能言語、フレームワーク</h3>
             <p>
               HTML5/CSS3、JavaScript(React)、PHP
               <br />
               Laravel、Next.js
             </p>
-            <h3>◯使用ツール</h3>
+            <h3>◯ 使用ツール</h3>
             <p>AdobeXD, Figma, Illustration</p>
           </WorkBody>
         </TwoColumnMain>
