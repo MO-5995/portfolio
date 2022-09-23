@@ -1,7 +1,14 @@
 import React from "react";
 import styles from "styles/hero.module.css";
 import Image from "next/image";
-import topImage from "images/top.jpg";
+//import topImage from "images/top.jpg";
+
+const topImage = {
+  src: "https://images.microcms-assets.io/assets/7fad38de05fc4dcba30e419a0c5e4625/d34f94b696fc4c75950de5fcae704b86/top.jpg",
+  height: 853,
+  width: 640,
+  blurDataURL: "data:image/png;base64;",
+};
 
 export default function Hero({ title, subtitle, text, imageOn = false }) {
   return (

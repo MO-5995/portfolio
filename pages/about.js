@@ -9,7 +9,14 @@ import {
   TwoColumnSidebar,
 } from "@/components/two-column";
 import Image from "next/image";
-import eyecatch from "images/icon.png";
+//import eyecatch from "images/icon.png";
+
+const eyecatch = {
+  src: "https://images.microcms-assets.io/assets/7fad38de05fc4dcba30e419a0c5e4625/b638681c71974e91b26187a55a7efb41/icon.png",
+  height: 512,
+  width: 512,
+  blurDataURL: "data:image/png;base64;",
+};
 
 export default function About() {
   return (
