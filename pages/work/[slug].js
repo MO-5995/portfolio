@@ -19,7 +19,6 @@ import { eyecatchLocal } from "lib/constants";
 
 export default function Work({
   title,
-  content,
   eyecatch,
   categories,
   description,
@@ -52,9 +51,9 @@ export default function Work({
       </figure>
       <TwoColumn>
         <TwoColumnMain>
-          <WorkBody>
+          {/* <WorkBody>
             <ConvertBody contentHTML={content} />
-          </WorkBody>
+          </WorkBody> */}
         </TwoColumnMain>
         <TwoColumnSidebar>
           <WorkCategories categories={categories} />
@@ -94,7 +93,6 @@ export async function getStaticProps(context) {
     return {
       props: {
         title: work.title,
-        content: work.content,
         eyecatch: eyecatch,
         categories: work.categories,
         description: description,

@@ -11,6 +11,20 @@ export default function Work({ works }) {
     <Container>
       <Meta pageTitle="work" pageDesc="work list" />
       <Hero title="Work" subtitle="Recent works" />
+      <p
+        style={{ fontSize: "18px", fontWeight: "600", color: "var(--gray-25)" }}
+      >
+        デザインは主に
+        <a
+          style={{ textDecoration: "underline" }}
+          href="https://cocoda.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Cocoda
+        </a>
+        で提供されていたUIデザインの課題です。（現在課題提供サービスは終了）
+      </p>
       <Works works={works} />
     </Container>
   );
