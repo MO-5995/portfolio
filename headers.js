@@ -13,7 +13,7 @@ module.exports = [
   },
   {
     key: "X-Frame-Options",
-    value: "SAMEORIGIN",
+    value: "sameorigin",
   },
   {
     key: "X-XSS-Protection",
@@ -25,7 +25,7 @@ module.exports = [
   },
   {
     key: "Permissions-Policy",
-    value: "camera=*",
+    value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
   },
   {
     key: "Content-Security-Policy",
