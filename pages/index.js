@@ -12,12 +12,7 @@ export default function Home({ works }) {
   return (
     <Container>
       <Meta />
-      <Hero
-        title="PORTFOLIO"
-        subtitle="Markup Engineer"
-        text="Mai O."
-        imageOn
-      />
+      <Hero title="PORTFOLIO" subtitle="Web Engineer" text="Mai O." imageOn />
       <Works works={works} />
       <Pagination nextUrl="/work" nextText="More Works" />
     </Container>
