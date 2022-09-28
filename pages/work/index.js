@@ -14,7 +14,8 @@ export default function Work({ works }) {
       <p
         style={{ fontSize: "18px", fontWeight: "600", color: "var(--gray-25)" }}
       >
-        デザインは主に
+        独学で作成したUIデザインの一部です。
+        <br />
         <a
           style={{ textDecoration: "underline" }}
           href="https://cocoda.design/"
@@ -23,7 +24,7 @@ export default function Work({ works }) {
         >
           Cocoda
         </a>
-        で提供されていたUIデザインの課題です。（現在課題提供サービスは終了）
+        で提供されていたUIデザインの課題に取り組みました。（現在課題提供サービスは終了）
       </p>
       <Works works={works} />
     </Container>

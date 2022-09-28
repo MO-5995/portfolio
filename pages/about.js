@@ -79,11 +79,11 @@ export default function About() {
               </li>
             </ul>
             <p>
-              UIデザインを独学で学んでおり、将来的にはデザインに強いフロントエンドエンジニアになることを目標にしています。
+              UIデザインを独学で学んでおり、将来的にはデザインに強いエンジニアになることを目標にしています。
             </p>
-            <h3>◯ 使用可能言語、フレームワーク</h3>
+            <h3>◯ 使用可能言語、ライブラリ、フレームワーク</h3>
             <p>
-              HTML5/CSS3、JavaScript(React.js)、PHP
+              HTML5/CSS3、JavaScript(React.js,jQuery)、PHP
               <br />
               Laravel、Next.js
             </p>
