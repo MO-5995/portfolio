@@ -83,7 +83,7 @@ export default function About() {
             </p>
             <h3>◯ 使用可能言語、ライブラリ、フレームワーク</h3>
             <p>
-              HTML5/CSS3、JavaScript(React.js,jQuery)、PHP
+              HTML5/CSS3、JavaScript(React.js,jQuery)、PHP、SQL(PostgreSQL、MySQL)
               <br />
               Laravel、Next.js
             </p>
